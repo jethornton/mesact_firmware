@@ -1,0 +1,6 @@
+7i97_D.bit
+6 PWM Outputs
+6 Encoder Inputs
+1 Smart Serial Port
+16 Inputs 6 Outputs
+

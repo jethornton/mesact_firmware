@@ -1,0 +1,9 @@
+7i95t_1pktv2d.bin
+6 Axes of Step and Direction
+6 Encoder Input
+1 Smart Serial Port
+1 PktUARTRX
+24 Inputs 6 Outputs
+
+P1 Daughter Card
+
