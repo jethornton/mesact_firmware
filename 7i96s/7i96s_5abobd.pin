@@ -118,7 +118,7 @@ Modules in configuration:
 
 Configuration pin-out:
 
-IO Connections for TB3
+IO Connections for TB3 -> 7I96_0
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
 TB3-1                   0   IOPort       InM              0        Input0          (In)
@@ -139,7 +139,7 @@ TB3-19,20              14   IOPort       SSR              0        Out-03       
 TB3-21,22              15   IOPort       OutM             0        Output4         (Out)
 TB3-23,24              16   IOPort       OutM             0        Output5         (Out)
 
-IO Connections for TB1/TB2
+IO Connections for TB1/TB2 -> 7I96_1
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
 TB1-2,3                17   IOPort       StepGen          0        Step/Table1     (Out)
@@ -160,24 +160,24 @@ TB2-18,19              31   IOPort       SSerial          0        TXData0      
 Internal-TXEn          32   IOPort       SSerial          0        TXEn0           (Out)
 Internal               33   IOPort       SSR              0        AC Ref          (Out)
 
-IO Connections for P1
+IO Connections for P1 -> 5ABOB
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
-P1-01/DB25-01          34   IOPort       PWM              1        PWM             (Out)
-P1-02/DB25-14          35   IOPort       None           
-P1-03/DB25-02          36   IOPort       StepGen          5        Step/Table1     (Out)
-P1-04/DB25-15          37   IOPort       None           
-P1-05/DB25-03          38   IOPort       StepGen          5        Dir/Table2      (Out)
-P1-06/DB25-16          39   IOPort       StepGen          9        Step/Table1     (Out)
-P1-07/DB25-04          40   IOPort       StepGen          6        Step/Table1     (Out)
-P1-08/DB25-17          41   IOPort       StepGen          9        Dir/Table2      (Out)
-P1-09/DB25-05          42   IOPort       StepGen          6        Dir/Table2      (Out)
-P1-11/DB25-06          43   IOPort       StepGen          7        Step/Table1     (Out)
-P1-13/DB25-07          44   IOPort       StepGen          7        Dir/Table2      (Out)
-P1-15/DB25-08          45   IOPort       StepGen          8        Step/Table1     (Out)
-P1-17/DB25-09          46   IOPort       StepGen          8        Dir/Table2      (Out)
-P1-19/DB25-10          47   IOPort       None           
-P1-21/DB25-11          48   IOPort       QCount           1        Quad-A          (In)
-P1-23/DB25-12          49   IOPort       QCount           1        Quad-B          (In)
-P1-25/DB25-13          50   IOPort       QCount           1        Quad-IDX        (In)
+Spindle-PWM            34   IOPort       PWM              1        PWM             (Out)
+Drive-Enable           35   IOPort       None           
+X-Step                 36   IOPort       StepGen          5        Step/Table1     (Out)
+Input-P15              37   IOPort       None           
+X-Dir                  38   IOPort       StepGen          5        Dir/Table2      (Out)
+B-Step                 39   IOPort       StepGen          9        Step/Table1     (Out)
+Y-Step                 40   IOPort       StepGen          6        Step/Table1     (Out)
+B-Dir,Relay            41   IOPort       StepGen          9        Dir/Table2      (Out)
+Y-Dir                  42   IOPort       StepGen          6        Dir/Table2      (Out)
+Z-Step                 43   IOPort       StepGen          7        Step/Table1     (Out)
+Z-Dir                  44   IOPort       StepGen          7        Dir/Table2      (Out)
+A-Step                 45   IOPort       StepGen          8        Step/Table1     (Out)
+A-Dir                  46   IOPort       StepGen          8        Dir/Table2      (Out)
+Input-P10              47   IOPort       None           
+Input-P11              48   IOPort       QCount           1        Quad-A          (In)
+Input-P12              49   IOPort       QCount           1        Quad-B          (In)
+Input-P13              50   IOPort       QCount           1        Quad-IDX        (In)
 

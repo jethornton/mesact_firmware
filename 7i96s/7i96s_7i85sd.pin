@@ -107,6 +107,15 @@ Modules in configuration:
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
+  Module: InM
+  There are 1 of InM in configuration
+  Version: 0
+  Registers: 5
+  BaseAddress: 8500
+  ClockFrequency: 100.000 MHz
+  Register Stride: 256 bytes
+  Instance Stride: 4 bytes
+
   Module: LED
   There are 1 of LED in configuration
   Version: 0
@@ -118,20 +127,20 @@ Modules in configuration:
 
 Configuration pin-out:
 
-IO Connections for TB3
+IO Connections for TB3 -> 7I96_0
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
-TB3-1                   0   IOPort       None           
-TB3-2                   1   IOPort       None           
-TB3-3                   2   IOPort       None           
-TB3-4                   3   IOPort       None           
-TB3-5                   4   IOPort       None           
-TB3-6                   5   IOPort       None           
-TB3-7                   6   IOPort       None           
-TB3-8                   7   IOPort       None           
-TB3-9                   8   IOPort       None           
-TB3-10                  9   IOPort       None           
-TB3-11                 10   IOPort       None           
+TB3-1                   0   IOPort       InM              0        Input0_EncA0    (In)
+TB3-2                   1   IOPort       InM              0        Input1_EncB0    (In)
+TB3-3                   2   IOPort       InM              0        Input2_EncA1    (In)
+TB3-4                   3   IOPort       InM              0        Input3_EncB1    (In)
+TB3-5                   4   IOPort       InM              0        Input4_EncA2    (In)
+TB3-6                   5   IOPort       InM              0        Input5_EncB2    (In)
+TB3-7                   6   IOPort       InM              0        Input6_EncA3    (In)
+TB3-8                   7   IOPort       InM              0        Input7_EncB3    (In)
+TB3-9                   8   IOPort       InM              0        Input8          (In)
+TB3-10                  9   IOPort       InM              0        Input9          (In)
+TB3-11                 10   IOPort       InM              0        Input10         (In)
 TB3-13,14              11   IOPort       SSR              0        Out-00          (Out)
 TB3-15,16              12   IOPort       SSR              0        Out-01          (Out)
 TB3-17,18              13   IOPort       SSR              0        Out-02          (Out)
@@ -139,7 +148,7 @@ TB3-19,20              14   IOPort       SSR              0        Out-03       
 TB3-21,22              15   IOPort       OutM             0        Output4         (Out)
 TB3-23,24              16   IOPort       OutM             0        Output5         (Out)
 
-IO Connections for TB1/TB2
+IO Connections for TB1/TB2 -> 7I96_1
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
 TB1-2,3                17   IOPort       StepGen          0        Step/Table1     (Out)
@@ -160,24 +169,24 @@ TB2-18,19              31   IOPort       SSerial          0        TXData0      
 Internal-TXEn          32   IOPort       SSerial          0        TXEn0           (Out)
 Internal               33   IOPort       SSR              0        AC Ref          (Out)
 
-IO Connections for P1
+IO Connections for P1 -> 7I85S
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
-P1-01/DB25-01          34   IOPort       SSerial          0        RXData1         (In)
-P1-02/DB25-14          35   IOPort       SSerial          0        TXData1         (Out)
-P1-03/DB25-02          36   IOPort       StepGen          8        Step/Table1     (Out)
-P1-04/DB25-15          37   IOPort       StepGen          8        Dir/Table2      (Out)
-P1-05/DB25-03          38   IOPort       StepGen          7        Step/Table1     (Out)
-P1-06/DB25-16          39   IOPort       StepGen          7        Dir/Table2      (Out)
-P1-07/DB25-04          40   IOPort       StepGen          6        Step/Table1     (Out)
-P1-08/DB25-17          41   IOPort       StepGen          6        Dir/Table2      (Out)
-P1-09/DB25-05          42   IOPort       StepGen          5        Step/Table1     (Out)
-P1-11/DB25-06          43   IOPort       StepGen          5        Dir/Table2      (Out)
-P1-13/DB25-07          44   IOPort       MuxedQCountSel   0        MuxSel0         (Out)
-P1-15/DB25-08          45   IOPort       MuxedQCount      0        MuxQ-A          (In)
-P1-17/DB25-09          46   IOPort       MuxedQCount      0        MuxQ-B          (In)
-P1-19/DB25-10          47   IOPort       MuxedQCount      0        MuxQ-IDX        (In)
-P1-21/DB25-11          48   IOPort       MuxedQCount      1        MuxQ-A          (In)
-P1-23/DB25-12          49   IOPort       MuxedQCount      1        MuxQ-B          (In)
-P1-25/DB25-13          50   IOPort       MuxedQCount      1        MuxQ-IDX        (In)
+TB1-19,20              34   IOPort       SSerial          0        RXData1         (In)
+TB1-21,22              35   IOPort       SSerial          0        TXData1         (Out)
+TB1-11,12              36   IOPort       StepGen          8        Step/Table1     (Out)
+TB1-13,14              37   IOPort       StepGen          8        Dir/Table2      (Out)
+TB1-3,4                38   IOPort       StepGen          7        Step/Table1     (Out)
+TB1-5,6                39   IOPort       StepGen          7        Dir/Table2      (Out)
+TB2-19,20              40   IOPort       StepGen          6        Step/Table1     (Out)
+TB2-21,22              41   IOPort       StepGen          6        Dir/Table2      (Out)
+TB2-11,12              42   IOPort       StepGen          5        Step/Table1     (Out)
+TB2-13,14              43   IOPort       StepGen          5        Dir/Table2      (Out)
+Internal-EncMux        44   IOPort       MuxedQCountSel   0        MuxSel0         (Out)
+TB3-1,2,9,10           45   IOPort       MuxedQCount      0        MuxQ-A          (In)
+TB3-4,5,12,13          46   IOPort       MuxedQCount      0        MuxQ-B          (In)
+TB3-7,8,12,13          47   IOPort       MuxedQCount      0        MuxQ-IDX        (In)
+TB3-17,18,TB2-1,2      48   IOPort       MuxedQCount      1        MuxQ-A          (In)
+TB3-20,21,TB2-4,5      49   IOPort       MuxedQCount      1        MuxQ-B          (In)
+TB3-23,24,TB2-7,8      50   IOPort       MuxedQCount      1        MuxQ-IDX        (In)
 
