@@ -8,7 +8,7 @@ General configuration information:
   Number of IO Ports: 2
   Width of one I/O port: 29
   Clock Low frequency: 100.0000 MHz
-  Clock High frequency: 200.0000 MHz
+  Clock High frequency: 160.0000 MHz
   IDROM Type: 3
   Instance Stride 0: 4
   Instance Stride 1: 64
@@ -62,9 +62,18 @@ Modules in configuration:
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
+  Module: PWM
+  There are 2 of PWM in configuration
+  Version: 0
+  Registers: 5
+  BaseAddress: 4100
+  ClockFrequency: 160.000 MHz
+  Register Stride: 256 bytes
+  Instance Stride: 4 bytes
+
   Module: PktUARTTX
   There are 1 of PktUARTTX in configuration
-  Version: 2
+  Version: 0
   Registers: 4
   BaseAddress: 6100
   ClockFrequency: 100.000 MHz
@@ -73,7 +82,7 @@ Modules in configuration:
 
   Module: PktUARTRX
   There are 1 of PktUARTRX in configuration
-  Version: 2
+  Version: 0
   Registers: 4
   BaseAddress: 6500
   ClockFrequency: 100.000 MHz
@@ -138,10 +147,10 @@ TB3-14,15               4   IOPort       StepGen          2        Step/Table1  
 TB3-16,17               5   IOPort       StepGen          2        Dir/Table2      (Out)
 TB3-20,21               6   IOPort       StepGen          3        Step/Table1     (Out)
 TB3-22,23               7   IOPort       StepGen          3        Dir/Table2      (Out)
-TB4-2,3                 8   IOPort       StepGen          4        Step/Table1     (Out)
-TB4-4,5                 9   IOPort       StepGen          4        Dir/Table2      (Out)
-TB4-8,9                10   IOPort       StepGen          5        Step/Table1     (Out)
-TB4-10,11              11   IOPort       StepGen          5        Dir/Table2      (Out)
+TB4-2,3                 8   IOPort       PWM              0        PWM             (Out)
+TB4-4,5                 9   IOPort       None           
+TB4-8,9                10   IOPort       PWM              1        PWM             (Out)
+TB4-10,11              11   IOPort       None           
 TB2-14,15              12   IOPort       SSerial          0        RXData0         (In)
 TB4-16,17              13   IOPort       SSerial          0        TXData0         (Out)
 Internal               14   IOPort       SSerial          0        TXEn0           (Out)

@@ -1,8 +1,0 @@
-7i95t_sdid.bin
-6 Axes of Step and Direction with Index
-6 Encoder Input
-1 Smart Serial Port
-24 Inputs 6 Outputs
-
-P1 Daughter Card
-
