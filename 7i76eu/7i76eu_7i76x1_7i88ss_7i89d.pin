@@ -45,7 +45,7 @@ Modules in configuration:
   Instance Stride: 4 bytes
 
   Module: StepGen
-  There are 13 of StepGen in configuration
+  There are 12 of StepGen in configuration
   Version: 2
   Registers: 10
   BaseAddress: 2000
@@ -129,9 +129,9 @@ DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func
  8                     28   IOPort       StepGen         10        Dir/Table2      (Out)
  9                     29   IOPort       StepGen         11        Step/Table1     (Out)
 10                     30   IOPort       StepGen         11        Dir/Table2      (Out)
-11                     31   IOPort       StepGen         12        Step/Table1     (Out)
-12                     32   IOPort       StepGen         12        Dir/Table2      (Out)
-13                     33   IOPort       None           
+11                     31   IOPort       SSerial          0        TXEn2           (Out)
+12                     32   IOPort       SSerial          0        TXData2         (Out)
+13                     33   IOPort       SSerial          0        RXData2         (In)
 
 IO Connections for P2
 DB25 pin#             I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
