@@ -44,6 +44,15 @@ Modules in configuration:
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
+  Module: Period
+  There are 1 of Period in configuration
+  Version: 0
+  Registers: 4
+  BaseAddress: B700
+  ClockFrequency: 100.000 MHz
+  Register Stride: 256 bytes
+  Instance Stride: 4 bytes
+
   Module: StepGen
   There are 5 of StepGen in configuration
   Version: 2
@@ -54,7 +63,7 @@ Modules in configuration:
   Instance Stride: 4 bytes
 
   Module: QCount
-  There are 6 of QCount in configuration
+  There are 1 of QCount in configuration
   Version: 2
   Registers: 5
   BaseAddress: 3000
@@ -127,7 +136,7 @@ TB2-2,3                25   IOPort       StepGen          4        Step/Table1  
 TB2-4,5                26   IOPort       StepGen          4        Dir/Table2      (Out)
 TB2-7,8                27   IOPort       QCount           0        Quad-A          (In)
 TB2-10,11              28   IOPort       QCount           0        Quad-B          (In)
-TB2-13,14              29   IOPort       QCount           0        Quad-IDX        (In)
+TB2-13,14              29   IOPort       Period           0        Input           (In)
 TB2-16,17              30   IOPort       SSerial          0        RXData0         (In)
 TB2-18,19              31   IOPort       SSerial          0        TXData0         (Out)
 Internal-TXEn          32   IOPort       SSerial          0        TXEn0           (Out)
@@ -136,21 +145,21 @@ Internal               33   IOPort       SSR              0        AC Ref       
 IO Connections for P1 -> 7I96_2
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
-P1-01/DB25-01          34   IOPort       QCount           1        Quad-A          (In)
-P1-02/DB25-14          35   IOPort       QCount           1        Quad-B          (In)
-P1-03/DB25-02          36   IOPort       QCount           1        Quad-IDX        (In)
-P1-04/DB25-15          37   IOPort       QCount           2        Quad-A          (In)
-P1-05/DB25-03          38   IOPort       QCount           2        Quad-B          (In)
-P1-06/DB25-16          39   IOPort       QCount           2        Quad-IDX        (In)
-P1-07/DB25-04          40   IOPort       QCount           3        Quad-A          (In)
-P1-08/DB25-17          41   IOPort       QCount           3        Quad-B          (In)
-P1-09/DB25-05          42   IOPort       QCount           3        Quad-IDX        (In)
-P1-11/DB25-06          43   IOPort       QCount           4        Quad-A          (In)
-P1-13/DB25-07          44   IOPort       QCount           4        Quad-B          (In)
-P1-15/DB25-08          45   IOPort       QCount           4        Quad-IDX        (In)
-P1-17/DB25-09          46   IOPort       QCount           5        Quad-A          (In)
-P1-19/DB25-10          47   IOPort       QCount           5        Quad-B          (In)
-P1-21/DB25-11          48   IOPort       QCount           5        Quad-IDX        (In)
+P1-01/DB25-01          34   IOPort       None           
+P1-02/DB25-14          35   IOPort       None           
+P1-03/DB25-02          36   IOPort       None           
+P1-04/DB25-15          37   IOPort       None           
+P1-05/DB25-03          38   IOPort       None           
+P1-06/DB25-16          39   IOPort       None           
+P1-07/DB25-04          40   IOPort       None           
+P1-08/DB25-17          41   IOPort       None           
+P1-09/DB25-05          42   IOPort       None           
+P1-11/DB25-06          43   IOPort       None           
+P1-13/DB25-07          44   IOPort       None           
+P1-15/DB25-08          45   IOPort       None           
+P1-17/DB25-09          46   IOPort       None           
+P1-19/DB25-10          47   IOPort       None           
+P1-21/DB25-11          48   IOPort       None           
 P1-23/DB25-12          49   IOPort       None           
 P1-25/DB25-13          50   IOPort       None           
 

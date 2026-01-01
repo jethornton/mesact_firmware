@@ -44,20 +44,38 @@ Modules in configuration:
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
+  Module: OutM
+  There are 1 of OutM in configuration
+  Version: 0
+  Registers: 1
+  BaseAddress: B000
+  ClockFrequency: 100.000 MHz
+  Register Stride: 256 bytes
+  Instance Stride: 4 bytes
+
   Module: StepGen
   There are 5 of StepGen in configuration
-  Version: 2
+  Version: 194
   Registers: 10
   BaseAddress: 2000
   ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
 
-  Module: QCount
-  There are 6 of QCount in configuration
-  Version: 2
+  Module: MuxedQCount
+  There are 6 of MuxedQCount in configuration
+  Version: 4
   Registers: 5
-  BaseAddress: 3000
+  BaseAddress: 3600
+  ClockFrequency: 100.000 MHz
+  Register Stride: 256 bytes
+  Instance Stride: 4 bytes
+
+  Module: MuxedQCountSel
+  There are 1 of MuxedQCountSel in configuration
+  Version: 0
+  Registers: 0
+  BaseAddress: 0000
   ClockFrequency: 100.000 MHz
   Register Stride: 256 bytes
   Instance Stride: 4 bytes
@@ -125,9 +143,9 @@ TB1-20,21              23   IOPort       StepGen          3        Step/Table1  
 TB1-22,23              24   IOPort       StepGen          3        Dir/Table2      (Out)
 TB2-2,3                25   IOPort       StepGen          4        Step/Table1     (Out)
 TB2-4,5                26   IOPort       StepGen          4        Dir/Table2      (Out)
-TB2-7,8                27   IOPort       QCount           0        Quad-A          (In)
-TB2-10,11              28   IOPort       QCount           0        Quad-B          (In)
-TB2-13,14              29   IOPort       QCount           0        Quad-IDX        (In)
+TB2-7,8                27   IOPort       MuxedQCount      2        MuxQ-A          (In)
+TB2-10,11              28   IOPort       MuxedQCount      2        MuxQ-B          (In)
+TB2-13,14              29   IOPort       MuxedQCount      2        MuxQ-IDX        (In)
 TB2-16,17              30   IOPort       SSerial          0        RXData0         (In)
 TB2-18,19              31   IOPort       SSerial          0        TXData0         (Out)
 Internal-TXEn          32   IOPort       SSerial          0        TXEn0           (Out)
@@ -136,21 +154,21 @@ Internal               33   IOPort       SSR              0        AC Ref       
 IO Connections for P1 -> 7I96_2
 Pin#                  I/O   Pri. func    Sec. func        Chan     Sec. Pin func   Sec. Pin Dir
 
-P1-01/DB25-01          34   IOPort       QCount           1        Quad-A          (In)
-P1-02/DB25-14          35   IOPort       QCount           1        Quad-B          (In)
-P1-03/DB25-02          36   IOPort       QCount           1        Quad-IDX        (In)
-P1-04/DB25-15          37   IOPort       QCount           2        Quad-A          (In)
-P1-05/DB25-03          38   IOPort       QCount           2        Quad-B          (In)
-P1-06/DB25-16          39   IOPort       QCount           2        Quad-IDX        (In)
-P1-07/DB25-04          40   IOPort       QCount           3        Quad-A          (In)
-P1-08/DB25-17          41   IOPort       QCount           3        Quad-B          (In)
-P1-09/DB25-05          42   IOPort       QCount           3        Quad-IDX        (In)
-P1-11/DB25-06          43   IOPort       QCount           4        Quad-A          (In)
-P1-13/DB25-07          44   IOPort       QCount           4        Quad-B          (In)
-P1-15/DB25-08          45   IOPort       QCount           4        Quad-IDX        (In)
-P1-17/DB25-09          46   IOPort       QCount           5        Quad-A          (In)
-P1-19/DB25-10          47   IOPort       QCount           5        Quad-B          (In)
-P1-21/DB25-11          48   IOPort       QCount           5        Quad-IDX        (In)
-P1-23/DB25-12          49   IOPort       None           
-P1-25/DB25-13          50   IOPort       None           
+P1-01/DB25-01          34   IOPort       None           
+P1-02/DB25-14          35   IOPort       None           
+P1-03/DB25-02          36   IOPort       SSerial          0        RXData4         (In)
+P1-04/DB25-15          37   IOPort       SSerial          0        TXData4         (Out)
+P1-05/DB25-03          38   IOPort       SSerial          0        RXData3         (In)
+P1-06/DB25-16          39   IOPort       SSerial          0        TXData3         (Out)
+P1-07/DB25-04          40   IOPort       SSerial          0        RXData2         (In)
+P1-08/DB25-17          41   IOPort       SSerial          0        TXData2         (Out)
+P1-09/DB25-05          42   IOPort       SSerial          0        RXData1         (In)
+P1-11/DB25-06          43   IOPort       SSerial          0        TXData1         (Out)
+P1-13/DB25-07          44   IOPort       MuxedQCountSel   0        MuxSel0         (Out)
+P1-15/DB25-08          45   IOPort       MuxedQCount      0        MuxQ-A          (In)
+P1-17/DB25-09          46   IOPort       MuxedQCount      0        MuxQ-B          (In)
+P1-19/DB25-10          47   IOPort       MuxedQCount      0        Shared-IDX      (In)
+P1-21/DB25-11          48   IOPort       MuxedQCount      1        MuxQ-A          (In)
+P1-23/DB25-12          49   IOPort       MuxedQCount      1        MuxQ-B          (In)
+P1-25/DB25-13          50   IOPort       MuxedQCount      1        Shared-IDX      (In)
 
